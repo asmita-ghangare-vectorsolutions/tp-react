@@ -1,9 +1,8 @@
 const { merge } = require("webpack-merge");
 const path = require("path");
-const PACKAGE = require("./package.json");
+var PACKAGE = require("./package.json");
 const TerserPlugin = require("terser-webpack-plugin");
-const singleSpaDefaults = require("webpack-config-single-spa-ts");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 const { execSync } = require("child_process");
 
 function getBranchName() {
@@ -15,13 +14,11 @@ function getBranchName() {
 }
 
 module.exports = (webpackConfigEnv, argv) => {
-  const orgName = "teachpoint-web";
   const defaultConfig = singleSpaDefaults({
-    orgName,
-    projectName: "root-config",
+    orgName: "teachpoint-web",
+    projectName: "header-menu",
     webpackConfigEnv,
     argv,
-    disableHtmlGeneration: true,
   });
 
   return merge(defaultConfig, {
@@ -39,22 +36,11 @@ module.exports = (webpackConfigEnv, argv) => {
     output: {
       path: path.resolve(
         __dirname,
-        `../../dist/root-config/${PACKAGE.version}${getBranchName()}`,
+        `../../dist/header-menu/${PACKAGE.version}${getBranchName()}`,
       ),
+      filename: `header-menu.js`,
     },
     // modify the webpack config however you'd like to by adding to this object
-    plugins: [
-      new HtmlWebpackPlugin({
-        inject: false,
-        template: "src/index.ejs",
-        templateParameters: {
-          isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
-          orgName,
-        },
-      }),
-      //new GitRevisionPlugin({branch: true}),
-    ],
-   externals: ["@vector-web-components/core"],
     module: {
       rules: [
         {
@@ -71,5 +57,6 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       ],
     },
+    externals: ["@vector-web-components/core"],
   });
 };

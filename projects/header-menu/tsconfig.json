@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist",
+    "skipLibCheck": true
+  },
+  "files": ["src/teachpoint-web-header-menu.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*", "setupTests.ts"]
+}

@@ -1,14 +1,15 @@
 {
   "name": "@teachpoint-web/root",
   "engines": {
-   "node": ">=20.15.0"
+    "node": ">=20.15.0"
   },
   "private": true,
   "workspaces": [
     "projects/*"
   ],
   "dependencies": {
-    "@vector-web-components/core": "^0.8.1",
+    "@vector-web-components/assets": "^0.1.0",
+    "@vector-web-components/core": "^0.28.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -16,10 +17,10 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@testing-library/dom": "^10.3.2",
+    "deepmerge": "4.3.1",
     "hygen": "^6.2.11",
     "lerna": "^8.1.3",
-    "prettier": "^3.0.0",
-    "deepmerge": "4.3.1"
+    "prettier": "^3.0.0"
   },
   "scripts": {
     "build": "lerna run build --stream",

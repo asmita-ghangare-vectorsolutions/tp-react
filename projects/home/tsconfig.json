@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declarationDir": "dist"
+  },
+  "files": ["src/teachpoint-web-home.tsx"],
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test*", "setupTests.ts"]
+}
