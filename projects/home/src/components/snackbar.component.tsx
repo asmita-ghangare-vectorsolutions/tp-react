@@ -1,20 +1,18 @@
 import { Card} from '@vector-web-components/core';
 import React, { useEffect } from 'react';
 export default function SnackbarComponent() {
- 
 
-export default function MyComponent() {
-    useEffect(() => {
-        // Code to run on component initialization
-        console.log('Component initialized');
+  //   useEffect(() => {
+  //       // Code to run on component initialization
+  //       console.log('Component initialized');
 
 
-        // Optional cleanup function (runs when the component unmounts)
-        return () => {
-            console.log('Component unmounted');
-        };
-    }, 
-  }
+  //       // Optional cleanup function (runs when the component unmounts)
+  //       return () => {
+  //           console.log('Component unmounted');
+  //       };
+  //   }, 
+  // }
   return (
     <>
     {/* <Snackbar id="example-snackbar" timeout={5000} onShown={console.log}>

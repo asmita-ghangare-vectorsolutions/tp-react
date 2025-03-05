@@ -1,4 +1,4 @@
-//  import SnackbarComponent from "./components/snackbar.component";
+ import SnackbarComponent from "./components/snackbar.component";
 
 export default function Root(props) {
   const center:any = {
@@ -14,7 +14,7 @@ export default function Root(props) {
   <div style={center}>
     <h2>Welcome Back, User (MFE Home Page)!!!!</h2>
   </div>
-  {/* <SnackbarComponent />  */}
+  <SnackbarComponent /> 
   </>
   );
 }

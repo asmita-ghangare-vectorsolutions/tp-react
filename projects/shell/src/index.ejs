@@ -70,6 +70,8 @@
       "imports": {
         "react": "https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.development.js",
         "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.development.js",
+        "@vector-web-components/core": "https://d3jl3dv633y0sz.cloudfront.net/web-components/@vector-web-components/core/v0.28.3/core.system.js",
+        "@vector-web-components/themes/styles.js": "https://d3jl3dv633y0sz.cloudfront.net/web-components/@vector-web-components/themes/v0.10.2/styles.js",
         "@teachpoint-web/header-menu": "//localhost:9091/header-menu.js",
         "@teachpoint-web/home": "//localhost:9092/home.js",
         "@teachpoint-web/root-config": "//localhost:9090/teachpoint-web-root-config.js"
@@ -123,7 +125,7 @@
   </noscript>
   <script>
     System.import('@teachpoint-web/root-config');
-   // System.import('@vector-web-components/core');
+    System.import('@vector-web-components/core');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
