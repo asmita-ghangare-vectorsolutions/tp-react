@@ -1,5 +1,6 @@
 import { Card} from '@vector-web-components/core';
 import React, { useEffect } from 'react';
+import CardWrapperComponent from './card.component';
 export default function SnackbarComponent() {
 
   //   useEffect(() => {
@@ -20,10 +21,11 @@ export default function SnackbarComponent() {
 
     </Snackbar> */}
     <h5>Card Component</h5>
-    <Card theme='padded elevated'>
+    {/* <Card theme='padded elevated'>
     <div slot="header">Shiba Inu</div>
     <div slot="content">The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.</div>
-    </Card>
+    </Card> */}
+    <CardWrapperComponent />
     {/* <h5>Paginator</h5>
     <Paginator page={1} pageSize={25}></Paginator> */}
   </>
